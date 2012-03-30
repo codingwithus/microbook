@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, HomeTabActivity!</string>
+    <string name="app_name">360动漫微博排行榜</string>
+    <string name="aboutus">
+   	 适用人群：   动漫微博控
+ 	\n
+           具体包括：\n
+           厌倦垃圾信息，只看精品；\n
+          只关注意见领袖，不愿做意见领袖；\n
+         我们为你们提供新浪微博动漫相关人群的分类排行。
+          
+	公司网址：www.facecan.com  
+\n
+
+ 
+	</string>
+    
+</resources>

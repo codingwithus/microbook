@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:background="#ffffffff" android:orientation="vertical">
+  <RelativeLayout android:background="@drawable/titlebar_lightgray_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/attention_title">
+        <TextView android:textSize="16px" android:layout_centerInParent="true" android:layout_height="wrap_content" android:textColor="#343434" android:layout_width="wrap_content"  android:text="关注列表" android:id="@+id/attention_titletxt"></TextView>
+        <ProgressBar android:layout_width="30dp"  android:layout_height="30dp" android:id="@+id/am_progressbar" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:visibility="invisible" android:layout_marginRight="10dp"></ProgressBar>
+    </RelativeLayout>
+    <GridView android:layout_height="wrap_content" android:layout_width="fill_parent" android:verticalSpacing="5dp" android:numColumns="3" android:id="@+id/am_grid" android:layout_weight="1" android:horizontalSpacing="10dp"></GridView>
+</LinearLayout>

@@ -1,0 +1,84 @@
+package com.fiveone.date.util.zoomimage;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.Window;
+import android.view.View.OnClickListener;
+import android.widget.ZoomControls;
+import com.fiveone.date.R;
+
+public class ImageZoomActivity extends Activity {
+	/** Called when the activity is first created. */
+	private ImageZoomView mZoomView;
+	private ZoomState mZoomState;
+	private Bitmap mBitmap;
+	private SimpleZoomListener mZoomListener;
+	private Handler handler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			mZoomView.setImage(mBitmap);
+			mZoomState = new ZoomState();
+			mZoomView.setZoomState(mZoomState);
+			mZoomListener = new SimpleZoomListener();
+			mZoomListener.setZoomState(mZoomState);
+			mZoomView.setOnTouchListener(mZoomListener);
+			resetZoomState();
+		}
+	};
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.zoom_image);
+		mZoomView = (ImageZoomView) findViewById(R.id.zoomView);
+		Intent intent = getIntent();
+		Bundle bundle = intent.getExtras();
+		mBitmap = (Bitmap)bundle.get("BitmapImage");
+		if (mBitmap == null) {
+			mBitmap = BitmapFactory.decodeResource(
+					ImageZoomActivity.this.getResources(), R.drawable.head_default2);
+		}
+		handler.sendEmptyMessage(0);
+		ZoomControls zoomCtrl = (ZoomControls) findViewById(R.id.zoomCtrl);
+		zoomCtrl.setOnZoomInClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				float z = mZoomState.getZoom() + 0.25f;
+				mZoomState.setZoom(z);
+				mZoomState.notifyObservers();
+			}
+		});
+		zoomCtrl.setOnZoomOutClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				float z = mZoomState.getZoom() - 0.25f;
+				mZoomState.setZoom(z);
+				mZoomState.notifyObservers();
+			}
+		});
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		if (mBitmap != null)
+			mBitmap.recycle();
+		// mZoomView.setOnTouchListener(null);
+		// mZoomState.deleteObservers();
+	}
+
+	private void resetZoomState() {
+		mZoomState.setPanX(0.5f);
+		mZoomState.setPanY(0.5f);
+		mZoomState.setZoom(1f);
+		mZoomState.notifyObservers();
+	}
+}

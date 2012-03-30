@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="comic_name">
+        <item>君之路动漫官方微博</item>
+        <item>君之路_中国影迷</item>
+        <item>君之路_爆笑联盟</item>
+        <item>君之路_新番速递</item>
+        <item>君之路_原创社区</item>
+        <item>君之路_腐世界</item>
+        <item>君之路_治愈堂</item>
+        <item>君之路_阳光宅男</item>
+        <item>君之路_漫展资讯</item>
+    </string-array>
+    <string-array name="comic_id">
+        <item>1834713575</item>
+        <item>2048797282</item>
+        <item>1945658680</item>
+        <item>1947203602</item>
+        <item>1947338984</item>
+        <item>1944892732</item>
+        <item>1945537520</item>       
+        <item>1945907304</item>
+        <item>1949829572</item>
+    </string-array>
+    <string-array name="comic_image">
+       	<item>comic_8</item>
+        <item>comic_9</item>
+        <item>comic_1</item>
+        <item>comic_2</item>
+        <item>comic_3</item>
+        <item>comic_4</item>
+        <item>comic_5</item>
+        <item>comic_6</item>
+        <item>comic_7</item>
+    </string-array>
+    
+    <string-array name="satisfaction_name">
+     	<item>咣咣族动漫官方微博</item>
+        <item>君子国官方微博</item>
+        <item>君之路_书虫博士</item>
+        <item>君之路_理财达人</item>
+        <item>君之路_股市神算子</item>
+        <item>君之路_香水东施</item>
+        <item>君之路_森林班主任</item>
+        <item>君之路_MBA老板娘</item>
+        <item>君之路_职场笑话</item>
+    </string-array>
+    <string-array name="satisfaction_id">
+        <item>2075665143</item>
+        <item>2075662073</item>
+        <item>1939429532</item>
+        <item>1939458624</item>
+        <item>1940913242</item>       
+        <item>1939329612</item>
+        <item>1941021082</item> 
+        <item>2147516971</item>
+        <item>2192453527</item>
+    </string-array>
+    <string-array name="satisfaction_image">
+        <item>satisfaction_1</item>
+        <item>satisfaction_2</item>
+        <item>satisfaction_3</item>
+        <item>satisfaction_4</item>
+        <item>satisfaction_5</item>
+        <item>satisfaction_6</item>
+        <item>satisfaction_7</item>
+        <item>satisfaction_8</item>
+        <item>satisfaction_9</item>
+    </string-array>
+</resources>

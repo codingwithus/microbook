@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:baselineAligned="true" android:layout_height="fill_parent" android:layout_width="fill_parent" android:orientation="horizontal" android:background="@drawable/first">
+    <RelativeLayout android:layout_height="fill_parent" android:id="@+id/relativeLayout1" android:layout_width="fill_parent">
+        <Button android:text="新浪微博账号登录" android:id="@+id/login" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:visibility="invisible" android:layout_marginBottom="10dp"></Button>
+    </RelativeLayout>
+</LinearLayout>

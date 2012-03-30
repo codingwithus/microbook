@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="wrap_content" android:layout_width="fill_parent" android:orientation="vertical" android:background="@drawable/friendlist_friend_selector">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+        <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:paddingLeft="20dp" android:id="@+id/list_item_text"></TextView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_marginTop="10dp">
+        <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/list_item_image" android:layout_marginLeft="20dp"></ImageView>
+    </LinearLayout>
+</LinearLayout>

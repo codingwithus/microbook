@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent" android:background="@drawable/friendlist_friend_selector" android:gravity="center" android:layout_height="60dp">
+    <LinearLayout android:id="@+id/linearLayout1" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="20dp" android:text="更多" android:id="@+id/list_footer_more" android:gravity="center" android:layout_height="40dp" android:layout_width="wrap_content" android:layout_marginRight="5dp"></TextView>
+        <ProgressBar style="?android:attr/progressBarStyleInverse" android:layout_width="20dp" android:layout_height="20dp" android:visibility="gone" android:id="@+id/list_footer_progressbar"></ProgressBar>
+    </LinearLayout>
+</LinearLayout>

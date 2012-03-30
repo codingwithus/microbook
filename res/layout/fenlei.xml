@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/rootblock_default_bg">
+  <RelativeLayout android:layout_height="40dp" android:id="@+id/fenlei_title" android:background="#ff00ffff" android:layout_width="fill_parent">
+        <TextView android:layout_width="wrap_content" android:layout_centerInParent="true" android:layout_height="wrap_content" android:id="@+id/fenlei_txt" android:textColor="#ff0000ff" android:textSize="20sp"></TextView>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/fenlei_lookall" android:layout_centerVertical="true" android:text="查看全部"></Button>
+        <ProgressBar android:layout_width="30dp"  android:layout_height="30dp" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:visibility="invisible" android:layout_marginRight="10dp" android:id="@+id/fenlei_progressbar"></ProgressBar>
+  </RelativeLayout>
+  <GridView android:layout_height="wrap_content" android:layout_width="fill_parent" android:verticalSpacing="5dp" android:numColumns="3" android:layout_weight="1" android:id="@+id/fenlei_grid" android:horizontalSpacing="20dp"></GridView>
+</LinearLayout>
