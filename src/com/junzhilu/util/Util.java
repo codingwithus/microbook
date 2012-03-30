@@ -45,7 +45,7 @@ public class Util {
 		if (text != null) {
 			progressDialog.setMessage(text);
 		} else {
-			progressDialog.setMessage("正在加载数据......");
+			progressDialog.setMessage("正在加载......");
 		}
 		return progressDialog;
 	}

@@ -2,11 +2,34 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/cover">
-    <RelativeLayout android:id="@+id/relativeLayout1" android:background="@drawable/titlebar_lightgray_bg" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:layout_width="wrap_content" android:layout_marginLeft="5dp" android:layout_height="wrap_content" android:src="@drawable/title_back_selector" android:id="@+id/flip_back" android:layout_centerVertical="true"></ImageView>
+  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/rootblock_default_bg">
+    <RelativeLayout android:id="@+id/relativeLayout1" android:background="@drawable/rootblock_add_toolbar_bg" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <ImageView android:layout_width="wrap_content" android:layout_marginLeft="5dp" android:layout_height="wrap_content" android:id="@+id/flip_back" android:layout_centerVertical="true" android:src="@drawable/triangle_left"></ImageView>
         <TextView android:layout_centerInParent="true" android:layout_height="wrap_content" android:textColor="#343434" android:layout_width="wrap_content" android:text="微博正文" android:id="@+id/flip_title_txt"></TextView>
-        <Button android:layout_centerVertical="true" android:layout_alignParentRight="true" android:visibility="invisible" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_width="wrap_content" android:id="@+id/flip_addbtn" android:background="@drawable/btn_add"></Button>
+        <Button android:layout_alignParentRight="true" android:visibility="invisible" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_width="wrap_content" android:id="@+id/flip_addbtn" android:background="@drawable/btn_add"></Button>
     </RelativeLayout>
-    <com.junzhilu.layout.FlipLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/flip_view" android:layout_weight="1"></com.junzhilu.layout.FlipLayout>
+    <com.junzhilu.layout.FlipLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/flip_view" android:layout_weight="1">
+
+    </com.junzhilu.layout.FlipLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/flip_btn_nextgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一组" android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/flip_btn_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论" android:layout_weight="1"/>
+
+    </LinearLayout>
+
 </LinearLayout>

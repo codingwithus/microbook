@@ -18,8 +18,6 @@
             </LinearLayout>
         </ScrollView>
         <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout2" android:layout_alignParentBottom="true" android:layout_width="fill_parent" android:gravity="center" android:layout_marginBottom="20dp">
-            <Button android:layout_width="wrap_content" android:id="@+id/flip_btn_nextgroup" android:background="@drawable/btn_nextgroup" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginRight="20dp"></Button>
-            <Button android:layout_width="wrap_content" android:id="@+id/flip_btn_pl" android:background="@drawable/btn_discuss" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginLeft="20dp"></Button>
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

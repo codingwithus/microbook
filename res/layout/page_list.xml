@@ -37,7 +37,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="腐世界" android:layout_marginTop="10dp"/>
+                    android:text="腐世界" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -63,7 +63,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="治愈堂" android:layout_marginTop="10dp"/>
+                    android:text="治愈堂" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
         </TableRow>
 
@@ -95,7 +95,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="新番速递" android:layout_marginTop="10dp"/>
+                    android:text="新番速递" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -121,7 +121,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="爆笑联盟" android:layout_marginTop="10dp"/>
+                    android:text="爆笑联盟" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
         </TableRow>
 
@@ -153,7 +153,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="阳光宅男" android:layout_marginTop="10dp"/>
+                    android:text="阳光宅男" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -179,7 +179,7 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="萌图馆" android:layout_marginTop="10dp"/>
+                    android:text="萌图馆" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
         </TableRow>
 
@@ -192,7 +192,7 @@
                 android:id="@+id/page_7"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rootblock_block_blue_1"
+                android:background="@drawable/rootblock_block_orange_1"
                 android:orientation="vertical" android:layout_weight="1" android:layout_margin="20dp">
 
                 <ImageView
@@ -207,14 +207,14 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:text="周边沙龙" android:gravity="center" android:layout_marginTop="10dp"/>
+                    android:text="周边沙龙" android:gravity="center" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/page_8"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" android:background="@drawable/rootblock_block_blue_1" android:layout_weight="1" android:layout_margin="20dp">
+                android:orientation="vertical" android:background="@drawable/rootblock_block_orange_1" android:layout_weight="1" android:layout_margin="20dp">
 
                 <ImageView
                     android:id="@+id/imageView1"
@@ -226,7 +226,7 @@
                     android:id="@+id/textView1"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:text="COS基地" android:layout_gravity="bottom" android:gravity="center" android:layout_marginTop="10dp"/>
+                    android:text="COS基地" android:layout_gravity="bottom" android:gravity="center" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
 
             </LinearLayout>
 

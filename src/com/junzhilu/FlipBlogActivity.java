@@ -86,7 +86,7 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 				}
 				if (bShowTips) {
 					Toast toast = Toast.makeText(getApplicationContext(),
-							"���һ������Կ�Ŷ��˦��Ҳ�����л���һ���Σ�",
+							"左右滑动可以切换哦O(∩_∩)O~",
 							Toast.LENGTH_LONG);
 					toast.setGravity(Gravity.CENTER, 0, 0);
 					toast.show();
@@ -104,7 +104,7 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 						page++;
 						if (dataTemp.isEmpty()) {
 							Toast toast = Toast.makeText(
-									getApplicationContext(), "�Ѿ������һ���ˣ�",
+									getApplicationContext(), "没有更多",
 									Toast.LENGTH_LONG);
 							toast.setGravity(Gravity.CENTER, 0, 0);
 							toast.show();
@@ -127,7 +127,7 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 						if (dataTemp.isEmpty()) {
 							Toast toast = Toast.makeText(
 									getApplicationContext(),
-									"����˺Ż�û��΢��O(��_��)O~��",
+									"没有数据",
 									Toast.LENGTH_LONG);
 							toast.setGravity(Gravity.CENTER, 0, 0);
 							toast.show();
@@ -208,6 +208,30 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 		});
 		progressDialog = Util.ShowProgressDialog(this, null);
 		progressDialog.show();
+		
+		Button flip_btn_pl = (Button)findViewById(R.id.flip_btn_pl);
+		flip_btn_pl.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					if (viewFlip.getCurrentView().getTag() != null) {
+						Intent intent = new Intent(FlipBlogActivity.this,
+								DiscussActivity.class);
+						intent.putExtra("id_blog", viewFlip.getCurrentView().getTag().toString());
+						startActivity(intent);
+					}
+				}
+			});
+		Button flip_btn_nextgroup = (Button)findViewById(R.id.flip_btn_nextgroup);
+		flip_btn_nextgroup.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				viewFlip.setDisplayedChild(viewFlip.getChildCount() - 1);
+			}
+		});
 
 	}
 
@@ -215,6 +239,7 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 
 		LayoutInflater inflater = LayoutInflater.from(this);
 		View flipview = inflater.inflate(R.layout.flipview, null);
+		flipview.setTag(item.get("id"));
 		ImageView flip_user_icon = (ImageView) flipview
 				.findViewById(R.id.flip_user_icon);
 		String profile_image_url = (String) item.get("profile_image_url");
@@ -255,33 +280,6 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 		if (text != null) {
 			flip_txt.setText(Html.fromHtml(text));
 		}
-
-		Button flip_btn_pl = (Button) flipview.findViewById(R.id.flip_btn_pl);
-		final String id = (String) item.get("id");
-		if (id != null) {
-			flip_btn_pl.setOnClickListener(new OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					Intent intent = new Intent(FlipBlogActivity.this,
-							DiscussActivity.class);
-					intent.putExtra("id_blog", id);
-					startActivity(intent);
-				}
-			});
-		}
-		Button flip_btn_nextgroup = (Button) flipview
-				.findViewById(R.id.flip_btn_nextgroup);
-		flip_btn_nextgroup.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				viewFlip.setDisplayedChild(viewFlip.getChildCount() - 1);
-			}
-		});
-
 		return flipview;
 	}
 

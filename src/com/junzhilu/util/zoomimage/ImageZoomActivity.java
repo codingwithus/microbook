@@ -118,7 +118,7 @@ public class ImageZoomActivity extends Activity implements ICallBack {
 	public void ShowProgressDialog() {
 		progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);// תȦ���
 		// ��������ΪProgressDialog.STYLE_HORIZONTAL,ʹ��setMax,setProgress,incrementProgressBy�������ý��
-		progressDialog.setMessage("	���ڼ���......");
+		progressDialog.setMessage("	正在加载......");
 		// ����ʹ��setButton2,setButton3����Ӹ�ఴť
 		// progressDialog.setCancelable(false);//���ɱ����ؼ�ȡ��Ի���
 		progressDialog.show();
