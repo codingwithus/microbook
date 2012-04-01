@@ -3,10 +3,10 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
-  android:orientation="vertical" android:background="@drawable/cover">
+  android:orientation="vertical" android:background="@drawable/mask_7">
 		  <RelativeLayout
 		  android:layout_width="fill_parent"
-		  android:layout_height="41dip" android:background="@drawable/titlebar_lightgray_bg">
+		  android:layout_height="41dip" android:background="@drawable/rootblock_add_toolbar_bg">
 		  
 		  <TextView
 		  android:layout_width="wrap_content"

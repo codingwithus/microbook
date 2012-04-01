@@ -5,7 +5,7 @@
   android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/rootblock_default_bg">
   <RelativeLayout android:layout_height="40dp" android:id="@+id/fenlei_title" android:layout_width="fill_parent" android:background="@drawable/rootblock_add_toolbar_bg">
         <TextView android:layout_width="wrap_content" android:layout_centerInParent="true" android:layout_height="wrap_content" android:id="@+id/fenlei_txt" android:textColor="#ff0000ff" android:textSize="20sp"></TextView>
-        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/fenlei_lookall" android:layout_centerVertical="true" android:text="查看全部"></Button>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/fenlei_lookall" android:layout_centerVertical="true" android:text="查看全部" android:background="@drawable/shake_button_click"></Button>
         <ProgressBar android:layout_width="30dp"  android:layout_height="30dp" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:visibility="invisible" android:layout_marginRight="10dp" android:id="@+id/fenlei_progressbar"></ProgressBar>
   </RelativeLayout>
   <GridView android:layout_height="wrap_content" android:layout_width="fill_parent" android:numColumns="4" android:layout_weight="1" android:id="@+id/fenlei_grid" android:horizontalSpacing="20dp"></GridView>

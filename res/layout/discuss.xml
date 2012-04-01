@@ -2,9 +2,9 @@
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="fill_parent"
-  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/cover">
-<RelativeLayout android:background="@drawable/titlebar_lightgray_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:id="@+id/discuss_title">
-        <ImageView android:layout_width="wrap_content" android:layout_marginLeft="5dp" android:layout_height="wrap_content" android:id="@+id/discuss_back" android:src="@drawable/title_back_selector" android:layout_centerVertical="true"></ImageView>
+  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/rootblock_default_bg">
+<RelativeLayout android:background="@drawable/rootblock_add_toolbar_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:id="@+id/discuss_title">
+        <ImageView android:layout_width="wrap_content" android:layout_marginLeft="5dp" android:layout_height="wrap_content" android:id="@+id/discuss_back" android:src="@drawable/triangle_left" android:layout_centerVertical="true"></ImageView>
         <TextView android:textSize="16px" android:layout_centerInParent="true" android:layout_height="wrap_content" android:textColor="#343434" android:layout_width="wrap_content" android:id="@+id/discuss_name" android:text="评论"></TextView>
     </RelativeLayout>
     <ListView android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@android:id/list" android:layout_weight="1" android:cacheColorHint="#00000000"></ListView>

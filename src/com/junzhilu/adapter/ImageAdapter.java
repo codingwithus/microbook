@@ -97,7 +97,7 @@ public class ImageAdapter extends BaseAdapter {
 		return button;
 	}
 
-	// /* ÒÀ¾Ý¾àÀëÖÐÑëµÄÎ»ÒÆÁ¿ ÀûÓÃgetScale·µ»ØviewsµÄ´óÐ¡(0.0f to 1.0f) */
+	// /* ï¿½ï¿½ï¿½Ý¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½getScaleï¿½ï¿½ï¿½ï¿½viewsï¿½Ä´ï¿½Ð¡(0.0f to 1.0f) */
 	// public float getScale(boolean focused, int offset)
 	// {
 	// return Math.max(0, 1.0f / (float) Math.pow(2, Math.abs(offset)));

@@ -4,8 +4,11 @@
 package com.junzhilu;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -82,5 +85,34 @@ public class PageListActivity extends Activity implements OnClickListener{
 			break;
 		}
 		startActivity(intent);
+	}
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			new AlertDialog.Builder(this)
+			.setIcon(R.drawable.alert_dialog_icon)
+			.setTitle("退出")
+			.setMessage("确定退出？")
+			.setPositiveButton("确定",
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,
+								int whichButton) {
+
+							/* User clicked OK so do some stuff */
+							PageListActivity.this.finish();
+						}
+					})
+			.setNegativeButton("取消",
+					new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog,
+								int whichButton) {
+
+							/* User clicked Cancel so do some stuff */
+							dialog.dismiss();
+						}
+					}).create().show();
+		}
+		return true;
 	}
 }

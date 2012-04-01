@@ -6,7 +6,7 @@
     <RelativeLayout android:id="@+id/relativeLayout1" android:background="@drawable/rootblock_add_toolbar_bg" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
         <ImageView android:layout_width="wrap_content" android:layout_marginLeft="5dp" android:layout_height="wrap_content" android:id="@+id/flip_back" android:layout_centerVertical="true" android:src="@drawable/triangle_left"></ImageView>
         <TextView android:layout_centerInParent="true" android:layout_height="wrap_content" android:textColor="#343434" android:layout_width="wrap_content" android:text="微博正文" android:id="@+id/flip_title_txt"></TextView>
-        <Button android:layout_alignParentRight="true" android:visibility="invisible" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_width="wrap_content" android:id="@+id/flip_addbtn" android:background="@drawable/btn_add"></Button>
+        <Button android:layout_alignParentRight="true" android:visibility="invisible" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/flip_addbtn" android:text="关注" android:background="@color/btn_selector"></Button>
     </RelativeLayout>
     <com.junzhilu.layout.FlipLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/flip_view" android:layout_weight="1">
 
@@ -16,19 +16,19 @@
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/flip_btn_nextgroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="下一组" android:layout_weight="1"/>
+        android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="15dp">
 
         <Button
             android:id="@+id/flip_btn_pl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="评论" android:layout_weight="1"/>
+            android:background="@drawable/comments" android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/flip_btn_nextgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/playback_next" android:layout_marginLeft="20dp"/>
 
     </LinearLayout>
 
