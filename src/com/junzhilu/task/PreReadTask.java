@@ -17,6 +17,7 @@ import android.os.Process;
 
 public abstract class PreReadTask<Params, Progress, Result> {
 	private static final String LOG_TAG = "FifoAsyncTask";
+	private static final int NUMBER_THREAD = 10;
 
 	// private static final int CORE_POOL_SIZE = 5;
 	// private static final int MAXIMUM_POOL_SIZE = 5;
@@ -34,7 +35,7 @@ public abstract class PreReadTask<Params, Progress, Result> {
 	};
 
 	private static final ExecutorService sExecutor = Executors
-			.newSingleThreadExecutor(sThreadFactory);// ֻ��һ�������̵߳��̳߳�
+			.newFixedThreadPool(NUMBER_THREAD, sThreadFactory);// ֻ��һ�������̵߳��̳߳�
 
 	private static final int MESSAGE_POST_RESULT = 0x1;
 	private static final int MESSAGE_POST_PROGRESS = 0x2;
