@@ -6,14 +6,11 @@ package com.junzhilu.adapter;
 import java.util.List;
 import java.util.Map;
 
+import www.codingwith.us.img.ImageDownloader;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
-
-import com.junzhilu.task.ImageViewTask;
-import com.junzhilu.util.ImageDownloader;
 
 /**
  * @author eureka
@@ -36,13 +33,14 @@ public class GridAdapter extends SimpleAdapter {
 		// TODO Auto-generated method stub
 		if (value != null) {
 			v.setTag(value);
-			Bitmap bitmap = ImageDownloader.GetInstance().getBitmapFromCache(
-					value);
-			if (bitmap != null) {
-				v.setImageBitmap(bitmap);
-			} else {
-				new ImageViewTask().execute(value, gridview);
-			}
+			ImageDownloader.GetInstance().DownLoad(value, v);
+//			Bitmap bitmap = ImageDownloader.GetInstance().getBitmapFromCache(
+//					value);
+//			if (bitmap != null) {
+//				v.setImageBitmap(bitmap);
+//			} else {
+//				new ImageViewTask().execute(value, gridview);
+//			}
 		}
 	}
 

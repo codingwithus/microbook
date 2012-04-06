@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import www.codingwith.us.img.ImageDownloader;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -245,14 +247,16 @@ public class FlipBlogActivity extends Activity implements ICallBack,
 		String profile_image_url = (String) item.get("profile_image_url");
 		if (profile_image_url != null) {
 			flip_user_icon.setTag(profile_image_url);
-			new ImageDownloadTask().execute(profile_image_url, flip_user_icon);
+//			new ImageDownloadTask().execute(profile_image_url, flip_user_icon);
+			ImageDownloader.GetInstance().DownLoad(profile_image_url, flip_user_icon);
 		}
 		ImageView flip_pic = (ImageView) flipview.findViewById(R.id.flip_pic);
 		String thumbnail_pic = (String) item.get("thumbnail_pic");
 		final String bmiddle_pic = (String) item.get("bmiddle_pic");
 		if (thumbnail_pic != null) {
 			flip_pic.setTag(thumbnail_pic);
-			new ImageDownloadTask().execute(thumbnail_pic, flip_pic);
+//			new ImageDownloadTask().execute(thumbnail_pic, flip_pic);
+			ImageDownloader.GetInstance().DownLoad(thumbnail_pic, flip_pic);
 			if (bmiddle_pic != null) {
 				flip_pic.setOnClickListener(new OnClickListener() {
 
